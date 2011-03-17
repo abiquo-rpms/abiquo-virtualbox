@@ -1,5 +1,5 @@
 Name:     abiquo-virtualbox
-Version:  1.7
+Version:  1.7.5
 Release:  1
 Summary:  Abiquo VirtualBox Cloud Node setup package
 Group:    Development/System 
@@ -62,5 +62,8 @@ EOF
 %defattr(-,root,root,-)
 
 %changelog
+* Thu Mar 17 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.5-1
+- version bump
+
 * Thu Jan 20 2011 Sergio Rubio srubio@abiquo.com 1.7-1
 - Initial Release
