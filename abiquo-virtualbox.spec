@@ -1,6 +1,6 @@
 Name:     abiquo-virtualbox
 Version:  1.8
-Release:  1%{?dist} 
+Release:  2%{?dist} 
 Summary:  Abiquo VirtualBox Cloud Node setup package
 Group:    Development/System 
 License:  Multiple 
@@ -51,6 +51,9 @@ cat > /etc/sysconfig/libvirtd <<EOF
 #LIBVIRTD_ARGS="--listen"
 EOF
 
+if [ -f /etc/default/virtualbox ]; then
+  cp /etc/default/virtualbox /etc/default/virtualbox.rpmsave
+fi
 cat > /etc/default/virtualbox <<EOF
 VBOXWEB_USER=root
 VBoxManage setproperty websrvauthlibrary null
